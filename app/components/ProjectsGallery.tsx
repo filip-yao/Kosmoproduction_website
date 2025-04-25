@@ -21,6 +21,14 @@ const ProjectsGallery = () => {
       description: "Komplexní e-commerce řešení s integrací platebního systému",
       detailp: "https://renatamirkova.com",
     },
+    {
+      id: 1,
+      title: "Osobní portfólio",
+      image: "/projects/oskar_web.png",
+      description: "Statická stránka se systémem pro správu obsahu",
+    
+      detailp: "https://oskarpetr.com",
+    },
     // Přidejte další projekty...
   ];
 
@@ -266,7 +274,7 @@ const ProjectsGallery = () => {
               <iframe
                 ref={iframeRef}
                 src={iframeUrl}
-                className="w-full h-full border-none"
+                className="w-full h-full border-none bg-white"
                 onLoad={injectNavigationHandler}
               />
             </div>
