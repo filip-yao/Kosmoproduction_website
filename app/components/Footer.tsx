@@ -44,7 +44,7 @@ export default function Footer() {
           </div>
           
           <div className="text-white/60 text-sm mt-4">
-            Copyright © 2025 VAON s.r.o.
+            Copyright © 2025 Filip YAO IČO: 23236698.
           </div>
         </div>
 
