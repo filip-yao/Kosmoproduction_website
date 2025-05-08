@@ -120,6 +120,21 @@ const Home: React.FC = () => {
       </section>
 
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-900 to-purple-900 text-white">
+        <div className="max-w-7xl mx-auto text-center">
+          <h2 className="text-3xl font-bold mb-8">Prohlédněte si naši galerii</h2>
+          <p className="text-lg mb-8 text-white/80">
+            Objevte více z naší práce v naší galerii, kde najdete ukázky našich projektů.
+          </p>
+          <a 
+            href="/Services/photography/gallery" 
+            className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white py-3 px-8 rounded-full text-lg font-medium hover:from-purple-600 hover:to-blue-600 transition duration-300"
+          >
+            Zobrazit celou galerii
+          </a>
+        </div>
+      </section>
+
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-900 to-purple-900 text-white">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold mb-12 text-center">Spolupráce s našimi experty</h2>
           <p className="text-lg mb-12 text-center">

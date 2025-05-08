@@ -15,8 +15,10 @@ const photoProjects = [
   { id: 2, image: '/photo_slide/vanda2.jpg', title: 'Portrétní fotografie', description: 'Zachycení osobnosti a emocí v každém snímku' },
   { id: 3, image: '/photo_slide/motorka1.jpg', title: 'Portrétní fotografie', description: 'Zachycení osobnosti a emocí v každém snímku' },
   { id: 4, image: '/photo_slide/vanda3.PNG', title: 'Portrétní fotografie', description: 'Zachycení osobnosti a emocí v každém snímku' },
-  { id: 4, image: '/photo_slide/trumpeta1.jpg', title: 'Portrétní fotografie', description: 'Zachycení osobnosti a emocí v každém snímku' },
-  { id: 4, image: '/photo_slide/salina.jpg', title: 'Portrétní fotografie', description: 'Zachycení osobnosti a emocí v každém snímku' },
+  { id: 5, image: '/photo_slide/trumpeta1.jpg', title: 'Portrétní fotografie', description: 'Zachycení osobnosti a emocí v každém snímku' },
+  { id: 6, image: '/photo_slide/salina.jpg', title: 'Portrétní fotografie', description: 'Zachycení osobnosti a emocí v každém snímku' },
+  { id: 7, image: '/photo_slide/trumpeta2.jpg', title: 'Portrétní fotografie', description: 'Zachycení osobnosti a emocí v každém snímku' },
+  { id: 8, image: '/photo_slide/motorka2.jpg', title: 'Portrétní fotografie', description: 'Zachycení osobnosti a emocí v každém snímku' },
   ];
 
 const photoStyles = ['Portrét', 'Krajina', 'Architektura', 'Reportáž', 'Produktová'];
@@ -116,7 +118,7 @@ const Photography: React.FC = () => {
           </div>
           <div className="text-center mt-12">
             <motion.a 
-              href="/gallery" 
+              href="photography/gallery" 
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 to-teal-500 text-white py-3 px-8 rounded-full text-lg font-medium hover:from-blue-600 hover:to-teal-600 transition duration-300"
