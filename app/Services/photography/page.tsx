@@ -11,10 +11,13 @@ import { Camera, Image, PencilSimple, ShareNetwork, ArrowRight } from '@phosphor
 import { motion } from 'framer-motion';
 
 const photoProjects = [
-  { id: 1, image: '/Slidshow_photo/Portrait.png', title: 'Portrétní fotografie', description: 'Zachycení osobnosti a emocí v každém snímku' },
-  { id: 2, image: '/Slidshow_photo/Landscape.png', title: 'Krajinářská fotografie', description: 'Dechberoucí záběry přírody a krajiny' },
-  { id: 3, image: '/Slidshow_photo/Event.png', title: 'Eventová fotografie', description: 'Profesionální dokumentace vašich akcí' },
-];
+  { id: 1, image: '/photo_slide/vanda1.jpg', title: 'Portrétní fotografie', description: 'Zachycení osobnosti a emocí v každém snímku' },
+  { id: 2, image: '/photo_slide/vanda2.jpg', title: 'Portrétní fotografie', description: 'Zachycení osobnosti a emocí v každém snímku' },
+  { id: 3, image: '/photo_slide/motorka1.jpg', title: 'Portrétní fotografie', description: 'Zachycení osobnosti a emocí v každém snímku' },
+  { id: 4, image: '/photo_slide/vanda3.PNG', title: 'Portrétní fotografie', description: 'Zachycení osobnosti a emocí v každém snímku' },
+  { id: 4, image: '/photo_slide/trumpeta1.jpg', title: 'Portrétní fotografie', description: 'Zachycení osobnosti a emocí v každém snímku' },
+  { id: 4, image: '/photo_slide/salina.jpg', title: 'Portrétní fotografie', description: 'Zachycení osobnosti a emocí v každém snímku' },
+  ];
 
 const photoStyles = ['Portrét', 'Krajina', 'Architektura', 'Reportáž', 'Produktová'];
 
@@ -43,7 +46,7 @@ const Photography: React.FC = () => {
               className="absolute top-0 left-0 w-full h-full"
             >
               <img src={project.image} alt={project.title} className="w-full h-full object-cover" />
-              <div className="absolute inset-0 bg-black bg-opacity-50 backdrop-filter backdrop-blur-sm flex items-center justify-center">
+              <div className="absolute inset-0 bg-black bg-opacity-50 backdrop-filter flex items-center justify-center">
                 <div className="text-center text-white p-8 rounded-xl" style={{
                   background: "rgba(255, 255, 255, 0.1)",
                   backdropFilter: "blur(10px)",
