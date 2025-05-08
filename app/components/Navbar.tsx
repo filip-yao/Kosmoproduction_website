@@ -38,10 +38,10 @@ export default function Navbar() {
           }}
         >
           <GlassNavLink href="/" icon={House} label="Domov" />
-          <GlassNavLink href="../Services/social-media" icon={ShareNetwork} label="Sociální sítě" />
-          <GlassNavLink href="../Services/web-development" icon={Globe} label="Webové stránky" />
-          <GlassNavLink href="../Services/photography" icon={Aperture} label="Fotografie" />
-          <GlassNavLink href="../Services/graphic" icon={PenNib} label="Grafika" />
+          <GlassNavLink href="/Services/social-media" icon={ShareNetwork} label="Sociální sítě" />
+          <GlassNavLink href="/Services/web-development" icon={Globe} label="Webové stránky" />
+          <GlassNavLink href="/Services/photography" icon={Aperture} label="Fotografie" />
+          <GlassNavLink href="/Services/graphic" icon={PenNib} label="Grafika" />
           <GlassNavLink href="/contacts" icon={Phone} label="Kontakty" />
         </div>
 
