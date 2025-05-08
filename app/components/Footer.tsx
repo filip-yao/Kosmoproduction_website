@@ -33,7 +33,14 @@ export default function Footer() {
           
           <div className="flex items-center gap-2 mb-2 group">
             <Envelope size={18} weight="bold" className="text-blue-300" />
-            <span className="text-white/70">Email:</span>
+            <span className="text-white/70">IČO:</span>
+            <Link 
+              href="https://www.rzp.cz/verejne-udaje/cs/udaje/vyber-subjektu;nazev=FILIP%20YAO;roleSubjektu=P/subjekt;ssarzp=Aa71d116a3eceb6c3ad5d4e9a1a85711dab75f7093c8a1e8071a4b0db95ec89ba19d8"
+              className="text-white/90 hover:text-blue-300 transition-colors duration-300 relative"
+            >
+              23236698
+              <div className="absolute -bottom-1 left-0 h-[1px] w-0 bg-gradient-to-r from-purple-400 to-blue-400 transition-all duration-300 group-hover:w-full"></div>
+            </Link>
             <Link 
               href="mailto:info@kosmoproduction.eu"
               className="text-white/90 hover:text-blue-300 transition-colors duration-300 relative"
