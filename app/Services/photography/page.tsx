@@ -44,7 +44,7 @@ const Photography: React.FC = () => {
               key={project.id}
               initial={{ opacity: 0 }}
               animate={{ opacity: index === activeSlide ? 1 : 0 }}
-              transition={{ duration: 0.5 }}
+              transition={{ duration: 0.2 }}
               className="absolute top-0 left-0 w-full h-full"
             >
               <img src={project.image} alt={project.title} className="w-full h-full object-cover" />

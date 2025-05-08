@@ -43,7 +43,7 @@ const Gallery: React.FC = () => {
                 key={index}
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.2 }}
+                transition={{ duration: 0.5 }}
                 className="overflow-hidden rounded-2xl relative group"
                 onClick={() => setSelectedImageIndex(index)}
               >
