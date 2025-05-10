@@ -23,7 +23,14 @@ const photoProjects = [
 
 const SLIDE_INTERVAL = 5000;
 
-const renderSlideContent = (project) => (
+interface PhotoProject {
+  id: number;
+  image: string;
+  title: string;
+  description: string;
+}
+
+const renderSlideContent = (project: PhotoProject): JSX.Element => (
   <div className="absolute top-20 left-0 max-w-md bg-black bg-opacity-70 flex items-start justify-start p-6 rounded-r-lg">
     <div className="text-white">
       <h3 className="text-2xl font-bold mb-1">{project.title}</h3>
