@@ -11,17 +11,26 @@ import { Camera, Image, PencilSimple, ShareNetwork, ArrowRight } from '@phosphor
 import { motion } from 'framer-motion';
 
 const photoProjects = [
-  { id: 1, image: '/photo_slide/vanda1.jpg', title: 'Portrétní fotografie', description: 'Zachycení osobnosti a emocí v každém snímku' },
-  { id: 2, image: '/photo_slide/vanda2.jpg', title: 'Portrétní fotografie', description: 'Zachycení osobnosti a emocí v každém snímku' },
-  { id: 3, image: '/photo_slide/motorka1.jpg', title: 'Portrétní fotografie', description: 'Zachycení osobnosti a emocí v každém snímku' },
-  { id: 4, image: '/photo_slide/vanda3.PNG', title: 'Portrétní fotografie', description: 'Zachycení osobnosti a emocí v každém snímku' },
-  { id: 5, image: '/photo_slide/trumpeta1.jpg', title: 'Portrétní fotografie', description: 'Zachycení osobnosti a emocí v každém snímku' },
-  { id: 6, image: '/photo_slide/salina.jpg', title: 'Portrétní fotografie', description: 'Zachycení osobnosti a emocí v každém snímku' },
-  { id: 7, image: '/photo_slide/trumpeta2.jpg', title: 'Portrétní fotografie', description: 'Zachycení osobnosti a emocí v každém snímku' },
-  { id: 8, image: '/photo_slide/motorka2.jpg', title: 'Portrétní fotografie', description: 'Zachycení osobnosti a emocí v každém snímku' },
+  { id: 1, image: '/photo_slide/vanda1.jpg', title: 'Elegantní portrét ve studiu', description: 'Moderní ateliérová fotografie, která zvýrazňuje ženskou siluetu a styl. Precizní práce se světlem vytváří sofistikovanou atmosféru a podtrhuje osobitost i sebevědomí modelky.' },
+  { id: 2, image: '/photo_slide/vanda2.jpg', title: 'Portrét s nádechem tajemství', description: 'Stylová fotografie v tmavém ateliérovém prostředí, kde jemné nasvícení zvýrazňuje elegantní pózu a vlnité vlasy modelky. Kombinace modrých tónů a kontrastního světla vytváří jedinečnou, téměř filmovou atmosféru.' },
+  { id: 3, image: '/photo_slide/motorka1.jpg', title: 'Dynamika na dvou kolech', description: 'Akční moment zachycený při jízdě na motorce, kdy jezdec provádí wheelie na městské silnici. Fotografie vystihuje energii, odvahu a vášeň pro motorkářský životní styl v podvečerním světle.' },
+  { id: 4, image: '/photo_slide/vanda3.PNG', title: 'Smyslnost v černém', description: 'Umělecký portrét v elegantním černém outfitu, kde póza a práce se světlem zvýrazňují ladné křivky a ženskou eleganci. Minimalistické pozadí nechává vyniknout postavu a vytváří sofistikovanou, intimní atmosféru.' },
+  { id: 5, image: '/photo_slide/trumpeta1.jpg', title: 'Hudba v srdci orchestru', description: 'Zachycení mladého trumpetisty v plném soustředění během orchestrálního vystoupení. Fotografie vystihuje vášeň pro hudbu, preciznost hry a atmosféru společného muzicírování v elegantním prostředí koncertního sálu.' },
+  { id: 6, image: '/photo_slide/salina.jpg', title: 'Kavárna Slavia v pohybu města', description: 'Ikonická pražská kavárna Slavia zachycená v kontrastu s dynamickým pohybem projíždějící tramvaje. Fotografie spojuje historickou atmosféru místa s pulzujícím rytmem městského života a vytváří jedinečný pohled na každodenní Prahu.' },
+  { id: 7, image: '/photo_slide/trumpeta2.jpg', title: 'Síla dechových nástrojů', description: 'Detailní pohled na ruce hudebníků během orchestrálního vystoupení, kde zlaté žestě vynikají v kontrastu s modrými košilemi. Fotografie vystihuje souhru, koncentraci a energii společné hudební tvorby.' },
+  { id: 8, image: '/photo_slide/motorka2.jpg', title: 'Detail sportovní motorky v akci', description: 'Dynamický záběr na moderní sportovní motocykl, kde vynikají ostré linie kapotáže a výrazná červeno-bílá grafika. Fotografie zachycuje okamžik před jízdou, kdy jezdec pevně svírá řídítka a je připraven vyrazit na cestu.' },
 ];
 
 const SLIDE_INTERVAL = 5000;
+
+const renderSlideContent = (project) => (
+  <div className="absolute top-20 left-0 max-w-md bg-black bg-opacity-70 flex items-start justify-start p-6 rounded-r-lg">
+    <div className="text-white">
+      <h3 className="text-2xl font-bold mb-1">{project.title}</h3>
+      <p className="text-sm">{project.description}</p>
+    </div>
+  </div>
+);
 
 const Photography: React.FC = () => {
   const [activeSlide, setActiveSlide] = useState(0);
@@ -107,19 +116,7 @@ const Photography: React.FC = () => {
               className="absolute top-0 left-0 w-full h-full"
             >
               <img src={project.image} alt={project.title} className="w-full h-full object-cover" />
-              <div className="absolute inset-0 bg-black bg-opacity-50 backdrop-filter flex items-center justify-center">
-                <div
-                  className="text-center text-white p-8 rounded-xl"
-                  style={{
-                    background: "rgba(255, 255, 255, 0.1)",
-                    backdropFilter: "blur(10px)",
-                    border: "1px solid rgba(255, 255, 255, 0.2)",
-                  }}
-                >
-                  <h3 className="text-4xl font-bold mb-4">{project.title}</h3>
-                  <p className="text-xl">{project.description}</p>
-                </div>
-              </div>
+              {renderSlideContent(project)}
             </motion.div>
           ))}
         </div>
