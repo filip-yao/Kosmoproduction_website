@@ -12,7 +12,7 @@ import { motion } from 'framer-motion';
 import Masonry from 'react-masonry-css';
 
 const graphicProjects = [
-  { id: 1, image: '/graphic_slide/REHA.PNG', title: 'Logo Design', description: 'Logo pro rehabilitační centrum zaměřené na zdraví a pohyb.' },
+  { id: 1, image: '/graphic_slide/REHA.png', title: 'Logo Design', description: 'Logo pro rehabilitační centrum zaměřené na zdraví a pohyb.' },
   { id: 2, image: '/graphic_slide/plakat.png', title: 'Plakát', description: 'Soutěžní plakát na téma umělecké fotografie s důrazem na vizuální přitažlivost.' },
   { id: 3, image: '/graphic_slide/poster1.webp', title: 'Grafický Plakát', description: 'Kreativní plakát s výrazným vizuálem pro kulturní akci nebo událost.' },
   { id: 4, image: '/graphic_slide/poster2.webp', title: 'Promo Design', description: 'Reklamní plakát ideální pro propagaci produktů či služeb.' },
