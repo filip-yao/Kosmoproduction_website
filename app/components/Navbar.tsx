@@ -84,7 +84,7 @@ export default function Navbar() {
           >
             <div className="flex h-full flex-col items-center gap-4 overflow-y-auto p-6 pt-8">
               <GlassMobileNavLink href="/" icon={House} label="Domov" delay={0.1} />
-              <GlassMobileNavLink href="../Services/social-media" icon={ShareNetwork} label="Sociální sítě" delay={0.2} />
+              {/*<GlassMobileNavLink href="../Services/social-media" icon={ShareNetwork} label="Sociální sítě" delay={0.2} />*/}
               <GlassMobileNavLink href="../Services/web-development" icon={Globe} label="Webové stránky" delay={0.3} />
               <GlassMobileNavLink href="../Services/photography" icon={Aperture} label="Fotografie" delay={0.4} />
               <GlassMobileNavLink href="../Services/graphic" icon={PenNib} label="Grafika" delay={0.5} />
