@@ -9,6 +9,7 @@ import Steps from '@/app/components/Steps';
 import ScrollArrow from '@/app/components/ScrollArrow';
 import { Camera, Image, PencilSimple, ShareNetwork, ArrowRight } from '@phosphor-icons/react';
 import { motion } from 'framer-motion';
+import Masonry from 'react-masonry-css';
 
 const photoProjects = [
   { id: 1, image: '/photo_slide/vanda1.webp', title: 'Elegantní portrét ve studiu', description: 'Moderní ateliérová fotografie, která zvýrazňuje ženskou siluetu a styl. Precizní práce se světlem vytváří sofistikovanou atmosféru a podtrhuje osobitost i sebevědomí modelky.' },
@@ -164,36 +165,29 @@ const Photography: React.FC = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-blue-900 to-gray-900">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold mb-12 text-center text-white">Naše fotografické portfolio</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <Masonry
+            breakpointCols={{
+              default: 3,
+              1100: 2,
+              700: 1,
+            }}
+            className="flex -ml-4"
+            columnClassName="pl-4 bg-clip-padding"
+          >
             {photoProjects.map((project) => (
-              <motion.div
-                key={project.id}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5 }}
-                className="overflow-hidden rounded-2xl relative group"
-              >
-                <img src={project.image} alt={project.title} className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                  <div>
-                    <h3 className="text-xl font-bold text-white">{project.title}</h3>
-                    <p className="text-white/80">{project.description}</p>
-                  </div>
+              <div key={project.id} className="mb-4">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-auto rounded-lg shadow-lg"
+                />
+                <div className="mt-2 text-white">
+                  <h3 className="text-xl font-bold">{project.title}</h3>
+                  <p className="text-sm text-white/80">{project.description}</p>
                 </div>
-              </motion.div>
+              </div>
             ))}
-          </div>
-          <div className="text-center mt-12">
-            <motion.a
-              href="photography/gallery"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 to-teal-500 text-white py-3 px-8 rounded-full text-lg font-medium hover:from-blue-600 hover:to-teal-600 transition duration-300"
-            >
-              Zobrazit celou galerii
-              <ArrowRight size={20} weight="bold" />
-            </motion.a>
-          </div>
+          </Masonry>
         </div>
       </section>
 
