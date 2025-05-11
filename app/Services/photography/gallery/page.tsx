@@ -1,4 +1,4 @@
-"use client";
+{/*"use client";
 
 import React, { useState } from 'react';
 import Layout from '@/app/components/Layout';
@@ -99,4 +99,4 @@ const Gallery: React.FC = () => {
   );
 };
 
-export default Gallery;
+export default Gallery;*/}
