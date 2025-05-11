@@ -5,14 +5,14 @@ import Layout from '@/app/components/Layout';
 import { motion } from 'framer-motion';
 
 const galleryImages = [
-  '/photo_slide/vanda1.jpg',
-  '/photo_slide/vanda2.jpg',
-  '/photo_slide/motorka1.jpg',
-  '/photo_slide/vanda3.PNG',
-  '/photo_slide/trumpeta1.jpg',
-  '/photo_slide/salina.jpg',
-  '/photo_slide/trumpeta2.jpg',
-  '/photo_slide/motorka2.jpg',
+  '/photo_slide/vanda1.webp',
+  '/photo_slide/vanda2.webp',
+  '/photo_slide/motorka1.webp',
+  '/photo_slide/vanda3.webp',
+  '/photo_slide/trumpeta1.webp',
+  '/photo_slide/salina.webp',
+  '/photo_slide/trumpeta2.webp',
+  '/photo_slide/motorka2.webp',
 ];
 
 const Gallery: React.FC = () => {
