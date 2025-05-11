@@ -130,7 +130,7 @@ const Photography: React.FC = () => {
         </div>
       </section>
 
-      {/* ...zbytek stránky beze změny */}
+      
       <section className="text-center py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-900 to-blue-900 text-white">
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
