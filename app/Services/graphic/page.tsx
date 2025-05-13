@@ -218,47 +218,7 @@ const Graphic: React.FC = () => {
         </div>
       </section>
 
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-purple-900 to-gray-900">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold mb-12 text-center text-white">Cenová nabídka</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              { title: "Základní", price: "5 000 Kč", features: ["Logo design", "Základní branding", "2 revize"] },
-              { title: "Standard", price: "15 000 Kč", features: ["Logo design", "Kompletní branding", "Tiskoviny", "5 revizí"] },
-              { title: "Premium", price: "30 000 Kč", features: ["Logo design", "Kompletní branding", "Tiskoviny", "Web design", "Neomezené revize"] }
-            ].map((plan, index) => (
-              <motion.div 
-                key={plan.title}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="text-center p-8 rounded-2xl"
-                style={{
-                  background: "rgba(255, 255, 255, 0.1)",
-                  backdropFilter: "blur(10px)",
-                  border: "1px solid rgba(255, 255, 255, 0.2)"
-                }}
-              >
-                <h3 className="text-2xl font-bold mb-2 text-white">{plan.title}</h3>
-                <p className="text-3xl font-bold mb-6 text-blue-400">{plan.price}</p>
-                <ul className="space-y-3 mb-8">
-                  {plan.features.map((feature) => (
-                    <li key={feature} className="text-white/80">{feature}</li>
-                  ))}
-                </ul>
-                <motion.a 
-                  href="/contacts" 
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white py-2 px-6 rounded-full text-lg font-medium hover:from-purple-600 hover:to-blue-600 transition duration-300"
-                >
-                  Objednat
-                </motion.a>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+      
 
       <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-900 to-purple-900">
         <div className="max-w-3xl mx-auto text-center">

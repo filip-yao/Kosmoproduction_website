@@ -55,26 +55,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div 
-          className="hidden md:flex flex-col items-center p-4 rounded-xl"
-          style={{
-            background: "rgba(255, 255, 255, 0.03)",
-            border: "1px solid rgba(255, 255, 255, 0.05)"
-          }}
-        >
-          <div className="flex items-center gap-2 mb-2">
-            <Heart size={18} weight="fill" className="text-pink-400" />
-            <span className="font-medium text-white/90">MADE WITH LOVE IN</span>
-          </div>
-          
-          <Link 
-            href="https://en.wikipedia.org/wiki/Moravia"
-            className="flex items-center gap-2 text-lg font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-300 to-blue-300 hover:from-blue-300 hover:to-purple-300 transition-all duration-500"
-          >
-            <MapPin size={20} weight="bold" />
-            MORAVIA
-          </Link>
-        </div>
+        
         
         <div 
           className="hidden lg:flex items-center gap-6 p-4 rounded-xl"
